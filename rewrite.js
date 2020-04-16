@@ -49,5 +49,37 @@ function rewriteJSON(document) {
   // Add the server parameter so we actually know where to contact
   clone.servers = [{ url: "https://127.0.0.1:2999" }];
 
+  // Remove unused models
+  const unused = [
+    "BindingFullTypeHelp",
+    "BindingFullTypeIdentifier",
+    "BindingAsyncCancelEvent",
+    "BindingGenericEvent",
+    "BindingFullEventHelp",
+    "BindingCallbackEvent",
+    "AbilityResource",
+    "BindingHelpFormat",
+    "RemotingSerializedFormat",
+    "BindingFullApiHelp",
+    "BindingAsyncState",
+    "BindingAsyncFailureEvent",
+    "Vector2f",
+    "Vector3f",
+    "Vector4f",
+    "BindingFullArgumentHelp",
+    "BindingFullFieldHelp",
+    "BindingGenericAsyncEvent",
+    "TeamID",
+    "BindingFullFunctionHelp",
+    "Color",
+    "RemotingHelpFormat",
+    "RemotingPrivilege",
+    "BindingFullEnumValueHelp",
+  ];
+
+  for (const key of unused) {
+    delete clone.components.schemas[key];
+  }
+
   return clone;
 }
