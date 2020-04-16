@@ -1,0 +1,14 @@
+# Vector4f
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**W** | **float32** |  | [optional] 
+**X** | **float32** |  | [optional] 
+**Y** | **float32** |  | [optional] 
+**Z** | **float32** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
