@@ -46,5 +46,8 @@ function rewriteJSON(document) {
     }
   }
 
+  // Add the server parameter so we actually know where to contact
+  clone.servers = [{ url: "https://127.0.0.1:2999" }];
+
   return clone;
 }

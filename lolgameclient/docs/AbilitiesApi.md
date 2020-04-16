@@ -1,6 +1,6 @@
 # \AbilitiesApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://127.0.0.1:2999*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
