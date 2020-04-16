@@ -14,16 +14,6 @@ process.stdin.on("end", () => {
   process.stdout.write("\n");
 });
 
-function rewritePathParamSchemas(config) {
-  if ("parameters" in config === false) {
-    return;
-  }
-
-  for (const param of config.parameters) {
-    moveKeysToSchema(param, ["enum", "format", "type"]);
-  }
-}
-
 function moveKeysToSchema(object, keys) {
   if ("schema" in object === false) {
     object.schema = {};
@@ -39,11 +29,34 @@ function moveKeysToSchema(object, keys) {
 
 function rewriteJSON(document) {
   const clone = { ...document };
-  // Rewrite path parameters to use the correct format
-  for (const path of Object.values(clone.paths)) {
+
+  const pathsToRemove = [];
+  for (const key of Object.keys(clone.paths)) {
+    const path = clone.paths[key];
     for (const config of Object.values(path)) {
-      rewritePathParamSchemas(config);
+      if ("tags" in config) {
+        // If this has a builtin tag, flag it to be removed.
+        if (config.tags.includes("builtin")) {
+          pathsToRemove.push(key);
+          continue;
+        }
+
+        // Remove tags - The go generator will duplicate code for each tag, leading to compiler errors. Woops!
+        delete config.tags;
+      }
+
+      // Rewrite path parameters to use the correct format
+      if ("parameters" in config) {
+        for (const param of config.parameters) {
+          moveKeysToSchema(param, ["enum", "format", "type"]);
+        }
+      }
     }
+  }
+
+  // Remove all builtins.
+  for (const path of pathsToRemove) {
+    delete clone.paths[path];
   }
 
   // Add the server parameter so we actually know where to contact

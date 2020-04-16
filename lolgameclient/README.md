@@ -32,71 +32,22 @@ All URIs are relative to *https://127.0.0.1:2999*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AbilitiesApi* | [**GetLiveclientdataActiveplayerabilities**](docs/AbilitiesApi.md#getliveclientdataactiveplayerabilities) | **Get** /liveclientdata/activeplayerabilities | Get Abilities for the active player
-*ActivePlayerApi* | [**GetLiveclientdataActiveplayer**](docs/ActivePlayerApi.md#getliveclientdataactiveplayer) | **Get** /liveclientdata/activeplayer | Get all data about the active player
-*ActivePlayerApi* | [**GetLiveclientdataActiveplayerabilities**](docs/ActivePlayerApi.md#getliveclientdataactiveplayerabilities) | **Get** /liveclientdata/activeplayerabilities | Get Abilities for the active player
-*ActivePlayerApi* | [**GetLiveclientdataActiveplayername**](docs/ActivePlayerApi.md#getliveclientdataactiveplayername) | **Get** /liveclientdata/activeplayername | Returns the player name
-*ActivePlayerApi* | [**GetLiveclientdataActiveplayerrunes**](docs/ActivePlayerApi.md#getliveclientdataactiveplayerrunes) | **Get** /liveclientdata/activeplayerrunes | Retrieve the full list of runes for the active player
-*AllApi* | [**GetLiveclientdataAllgamedata**](docs/AllApi.md#getliveclientdataallgamedata) | **Get** /liveclientdata/allgamedata | Get all available data
-*AllPlayersApi* | [**GetLiveclientdataPlayeritems**](docs/AllPlayersApi.md#getliveclientdataplayeritems) | **Get** /liveclientdata/playeritems | Retrieve the list of items for the player
-*AllPlayersApi* | [**GetLiveclientdataPlayerlist**](docs/AllPlayersApi.md#getliveclientdataplayerlist) | **Get** /liveclientdata/playerlist | Retrieve the list of heroes in the game and their stats
-*AllPlayersApi* | [**GetLiveclientdataPlayermainrunes**](docs/AllPlayersApi.md#getliveclientdataplayermainrunes) | **Get** /liveclientdata/playermainrunes | Retrieve the basic runes of any player
-*AllPlayersApi* | [**GetLiveclientdataPlayerscores**](docs/AllPlayersApi.md#getliveclientdataplayerscores) | **Get** /liveclientdata/playerscores | Retrieve the list of the current scores for the player
-*AllPlayersApi* | [**GetLiveclientdataPlayersummonerspells**](docs/AllPlayersApi.md#getliveclientdataplayersummonerspells) | **Get** /liveclientdata/playersummonerspells | Retrieve the list of the summoner spells for the player
-*BuiltinApi* | [**AsyncDelete**](docs/BuiltinApi.md#asyncdelete) | **Post** /AsyncDelete | Cancels the asynchronous operation or removes its completion status.
-*BuiltinApi* | [**AsyncResult**](docs/BuiltinApi.md#asyncresult) | **Post** /AsyncResult | Retrieves the result of a completed asynchronous operation.
-*BuiltinApi* | [**AsyncStatus**](docs/BuiltinApi.md#asyncstatus) | **Post** /AsyncStatus | Retrieves details on the current state of an asynchronous operation.
-*BuiltinApi* | [**Cancel**](docs/BuiltinApi.md#cancel) | **Post** /Cancel | Attempts to cancel an asynchronous operation
-*BuiltinApi* | [**Exit**](docs/BuiltinApi.md#exit) | **Post** /Exit | Closes the connection.
-*BuiltinApi* | [**Help**](docs/BuiltinApi.md#help) | **Post** /Help | Returns information on available functions and types
-*BuiltinApi* | [**HttpApiDeclarationV1**](docs/BuiltinApi.md#httpapideclarationv1) | **Get** /swagger/v1/api-docs/{api} | Retrieves the API declaration for a supported API
-*BuiltinApi* | [**HttpApiDocsV1**](docs/BuiltinApi.md#httpapidocsv1) | **Get** /swagger/v1/api-docs | Retrieves the API documentation resource listing
-*BuiltinApi* | [**HttpApiDocsV2**](docs/BuiltinApi.md#httpapidocsv2) | **Get** /swagger/v2/swagger.json | Retrieves the API documentation
-*BuiltinApi* | [**HttpApiDocsV3**](docs/BuiltinApi.md#httpapidocsv3) | **Get** /swagger/v3/openapi.json | Retrieves the API documentation
-*BuiltinApi* | [**HttpAsyncDelete**](docs/BuiltinApi.md#httpasyncdelete) | **Delete** /async/v1/status/{asyncToken} | Cancels the asynchronous operation or removes its completion status.
-*BuiltinApi* | [**HttpAsyncResult**](docs/BuiltinApi.md#httpasyncresult) | **Get** /async/v1/result/{asyncToken} | Retrieves the result of a completed asynchronous operation.
-*BuiltinApi* | [**HttpAsyncStatus**](docs/BuiltinApi.md#httpasyncstatus) | **Get** /async/v1/status/{asyncToken} | Retrieves details on the current state of an asynchronous operation.
-*BuiltinApi* | [**Subscribe**](docs/BuiltinApi.md#subscribe) | **Post** /Subscribe | Subscribes to a given event
-*BuiltinApi* | [**Unsubscribe**](docs/BuiltinApi.md#unsubscribe) | **Post** /Unsubscribe | Unsubscribes from a given event
-*ChampionsApi* | [**GetLiveclientdataActiveplayer**](docs/ChampionsApi.md#getliveclientdataactiveplayer) | **Get** /liveclientdata/activeplayer | Get all data about the active player
-*ChampionsApi* | [**GetLiveclientdataActiveplayerabilities**](docs/ChampionsApi.md#getliveclientdataactiveplayerabilities) | **Get** /liveclientdata/activeplayerabilities | Get Abilities for the active player
-*ChampionsApi* | [**GetLiveclientdataEventdata**](docs/ChampionsApi.md#getliveclientdataeventdata) | **Get** /liveclientdata/eventdata | Get a list of events that have occurred in the game
-*ChampionsApi* | [**GetLiveclientdataPlayerlist**](docs/ChampionsApi.md#getliveclientdataplayerlist) | **Get** /liveclientdata/playerlist | Retrieve the list of heroes in the game and their stats
-*EventsApi* | [**GetLiveclientdataEventdata**](docs/EventsApi.md#getliveclientdataeventdata) | **Get** /liveclientdata/eventdata | Get a list of events that have occurred in the game
-*GameApi* | [**GetLiveclientdataGamestats**](docs/GameApi.md#getliveclientdatagamestats) | **Get** /liveclientdata/gamestats | Basic data about the game
-*ItemsApi* | [**GetLiveclientdataPlayeritems**](docs/ItemsApi.md#getliveclientdataplayeritems) | **Get** /liveclientdata/playeritems | Retrieve the list of items for the player
-*RunesApi* | [**GetLiveclientdataActiveplayerrunes**](docs/RunesApi.md#getliveclientdataactiveplayerrunes) | **Get** /liveclientdata/activeplayerrunes | Retrieve the full list of runes for the active player
-*RunesApi* | [**GetLiveclientdataPlayermainrunes**](docs/RunesApi.md#getliveclientdataplayermainrunes) | **Get** /liveclientdata/playermainrunes | Retrieve the basic runes of any player
-*ScoresApi* | [**GetLiveclientdataPlayerscores**](docs/ScoresApi.md#getliveclientdataplayerscores) | **Get** /liveclientdata/playerscores | Retrieve the list of the current scores for the player
-*UnitsApi* | [**GetLiveclientdataPlayerlist**](docs/UnitsApi.md#getliveclientdataplayerlist) | **Get** /liveclientdata/playerlist | Retrieve the list of heroes in the game and their stats
+*DefaultApi* | [**GetLiveclientdataActiveplayer**](docs/DefaultApi.md#getliveclientdataactiveplayer) | **Get** /liveclientdata/activeplayer | Get all data about the active player
+*DefaultApi* | [**GetLiveclientdataActiveplayerabilities**](docs/DefaultApi.md#getliveclientdataactiveplayerabilities) | **Get** /liveclientdata/activeplayerabilities | Get Abilities for the active player
+*DefaultApi* | [**GetLiveclientdataActiveplayername**](docs/DefaultApi.md#getliveclientdataactiveplayername) | **Get** /liveclientdata/activeplayername | Returns the player name
+*DefaultApi* | [**GetLiveclientdataActiveplayerrunes**](docs/DefaultApi.md#getliveclientdataactiveplayerrunes) | **Get** /liveclientdata/activeplayerrunes | Retrieve the full list of runes for the active player
+*DefaultApi* | [**GetLiveclientdataAllgamedata**](docs/DefaultApi.md#getliveclientdataallgamedata) | **Get** /liveclientdata/allgamedata | Get all available data
+*DefaultApi* | [**GetLiveclientdataEventdata**](docs/DefaultApi.md#getliveclientdataeventdata) | **Get** /liveclientdata/eventdata | Get a list of events that have occurred in the game
+*DefaultApi* | [**GetLiveclientdataGamestats**](docs/DefaultApi.md#getliveclientdatagamestats) | **Get** /liveclientdata/gamestats | Basic data about the game
+*DefaultApi* | [**GetLiveclientdataPlayeritems**](docs/DefaultApi.md#getliveclientdataplayeritems) | **Get** /liveclientdata/playeritems | Retrieve the list of items for the player
+*DefaultApi* | [**GetLiveclientdataPlayerlist**](docs/DefaultApi.md#getliveclientdataplayerlist) | **Get** /liveclientdata/playerlist | Retrieve the list of heroes in the game and their stats
+*DefaultApi* | [**GetLiveclientdataPlayermainrunes**](docs/DefaultApi.md#getliveclientdataplayermainrunes) | **Get** /liveclientdata/playermainrunes | Retrieve the basic runes of any player
+*DefaultApi* | [**GetLiveclientdataPlayerscores**](docs/DefaultApi.md#getliveclientdataplayerscores) | **Get** /liveclientdata/playerscores | Retrieve the list of the current scores for the player
+*DefaultApi* | [**GetLiveclientdataPlayersummonerspells**](docs/DefaultApi.md#getliveclientdataplayersummonerspells) | **Get** /liveclientdata/playersummonerspells | Retrieve the list of the summoner spells for the player
 
 
 ## Documentation For Models
 
- - [AbilityResource](docs/AbilityResource.md)
- - [BindingAsyncCancelEvent](docs/BindingAsyncCancelEvent.md)
- - [BindingAsyncFailureEvent](docs/BindingAsyncFailureEvent.md)
- - [BindingAsyncState](docs/BindingAsyncState.md)
- - [BindingCallbackEvent](docs/BindingCallbackEvent.md)
- - [BindingFullApiHelp](docs/BindingFullApiHelp.md)
- - [BindingFullArgumentHelp](docs/BindingFullArgumentHelp.md)
- - [BindingFullEnumValueHelp](docs/BindingFullEnumValueHelp.md)
- - [BindingFullEventHelp](docs/BindingFullEventHelp.md)
- - [BindingFullFieldHelp](docs/BindingFullFieldHelp.md)
- - [BindingFullFunctionHelp](docs/BindingFullFunctionHelp.md)
- - [BindingFullTypeHelp](docs/BindingFullTypeHelp.md)
- - [BindingFullTypeIdentifier](docs/BindingFullTypeIdentifier.md)
- - [BindingGenericAsyncEvent](docs/BindingGenericAsyncEvent.md)
- - [BindingGenericEvent](docs/BindingGenericEvent.md)
- - [BindingHelpFormat](docs/BindingHelpFormat.md)
- - [Color](docs/Color.md)
- - [RemotingHelpFormat](docs/RemotingHelpFormat.md)
- - [RemotingPrivilege](docs/RemotingPrivilege.md)
- - [RemotingSerializedFormat](docs/RemotingSerializedFormat.md)
- - [TeamId](docs/TeamId.md)
- - [Vector2f](docs/Vector2f.md)
- - [Vector3f](docs/Vector3f.md)
- - [Vector4f](docs/Vector4f.md)
 
 
 ## Documentation For Authorization

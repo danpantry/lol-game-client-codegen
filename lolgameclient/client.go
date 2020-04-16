@@ -47,29 +47,7 @@ type APIClient struct {
 
 	// API Services
 
-	AbilitiesApi *AbilitiesApiService
-
-	ActivePlayerApi *ActivePlayerApiService
-
-	AllApi *AllApiService
-
-	AllPlayersApi *AllPlayersApiService
-
-	BuiltinApi *BuiltinApiService
-
-	ChampionsApi *ChampionsApiService
-
-	EventsApi *EventsApiService
-
-	GameApi *GameApiService
-
-	ItemsApi *ItemsApiService
-
-	RunesApi *RunesApiService
-
-	ScoresApi *ScoresApiService
-
-	UnitsApi *UnitsApiService
+	DefaultApi *DefaultApiService
 }
 
 type service struct {
@@ -88,18 +66,7 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.common.client = c
 
 	// API Services
-	c.AbilitiesApi = (*AbilitiesApiService)(&c.common)
-	c.ActivePlayerApi = (*ActivePlayerApiService)(&c.common)
-	c.AllApi = (*AllApiService)(&c.common)
-	c.AllPlayersApi = (*AllPlayersApiService)(&c.common)
-	c.BuiltinApi = (*BuiltinApiService)(&c.common)
-	c.ChampionsApi = (*ChampionsApiService)(&c.common)
-	c.EventsApi = (*EventsApiService)(&c.common)
-	c.GameApi = (*GameApiService)(&c.common)
-	c.ItemsApi = (*ItemsApiService)(&c.common)
-	c.RunesApi = (*RunesApiService)(&c.common)
-	c.ScoresApi = (*ScoresApiService)(&c.common)
-	c.UnitsApi = (*UnitsApiService)(&c.common)
+	c.DefaultApi = (*DefaultApiService)(&c.common)
 
 	return c
 }
